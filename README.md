@@ -21,6 +21,32 @@ go get github.com/prs-io/openobserve-go
 
 Here’s how you can use the client to perform a search:
 
+```bash
+go run . --org default  --host https://openobserve.io search --since 15m --sql 'select * from k8s'
+```
+
+```bash
+go run .
+
+A command-line interface for interacting with OpenObserve.
+
+Usage:
+  openobserve [command]
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  help        Help about any command
+  search      Perform a search query
+  users       Users command
+
+Flags:
+  -h, --help          help for openobserve
+      --host string   OpenObserve host URL (required)
+      --org string    Organization ID (required)
+
+Use "openobserve [command] --help" for more information about a command.
+```
+
 ```go
 package main
 
